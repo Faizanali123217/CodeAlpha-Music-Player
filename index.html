@@ -5,29 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <title>Music Player</title>
 </head>
 <body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+                <div class="music-player">
+                    <h1>Music Player</h1>
+                    <audio id="audio" controls>
+                        <source src="assets/songs/song1.mp3" type="audio/mp3">
+                    </audio>
 
-    <div class="music-player">
-        <h1>Music Player</h1>
-        <audio id="audio" controls>
-            <source src="assets/songs/song1.mp3" type="audio/mp3">
-        </audio>
+                    <div class="controls d-flex flex-wrap justify-content-between">
+                        <button onclick="playPause()">Play/Pause</button>
+                        <button onclick="previousTrack()">Previous</button>
+                        <button onclick="nextTrack()">Next</button>
+                        <button onclick="volumeUp()">Volume +</button>
+                        <button onclick="volumeDown()">Volume -</button>
+                    </div>
 
-        <div class="controls">
-            <button onclick="playPause()">Play/Pause</button>
-            <button onclick="previousTrack()">Previous</button>
-            <button onclick="nextTrack()">Next</button>
-            <button onclick="volumeUp()">Volume +</button>
-            <button onclick="volumeDown()">Volume -</button>
-        </div>
-
-        <div class="info">
-            <p id="music-info">Now Playing: <span id="track-title">Track Name</span></p>
+                    <div class="info">
+                        <p id="music-info">Now Playing: <span id="track-title">Track Name</span></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
 </body>
 </html>
-<script src="assets/js/script.js"></script>
